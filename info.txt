@@ -1,3 +1,9 @@
+Node version: v0.12.4
+
+Cordova version: 5.0.0
+
+Config.xml file: 
+
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.subacuaticas.appweb" version="1.0.0"  xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>AppWeb Subacuaticas</name>
   <description>Aplicacion para el club deportivo de Actividades Subacuaticas de la Real sociedad</description>
@@ -18,8 +24,25 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-  
+  <gap:plugin name="org.apache.cordova.battery-status"/>
+  <gap:plugin name="org.apache.cordova.camera"/>
+  <gap:plugin name="org.apache.cordova.media-capture"/>
+  <gap:plugin name="org.apache.cordova.console"/>
+  <gap:plugin name="org.apache.cordova.contacts"/>
+  <gap:plugin name="org.apache.cordova.device"/>
+  <gap:plugin name="org.apache.cordova.device-motion"/>
+  <gap:plugin name="org.apache.cordova.device-orientation"/>
+  <gap:plugin name="org.apache.cordova.dialogs"/>
+  <gap:plugin name="org.apache.cordova.file"/>
+  <gap:plugin name="org.apache.cordova.file-transfer"/>
+  <gap:plugin name="org.apache.cordova.geolocation"/>
+  <gap:plugin name="org.apache.cordova.globalization"/>
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
+  <gap:plugin name="org.apache.cordova.media"/>
+  <gap:plugin name="org.apache.cordova.network-information"/>
+  <gap:plugin name="org.apache.cordova.splashscreen"/>
+  <gap:plugin name="org.apache.cordova.vibration"/>
+  <gap:plugin name="nl.x-services.plugins.socialsharing" />
   
   <icon src="www/icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
@@ -54,3 +77,10 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
 </widget>
+
+Plugins: 
+
+cordova-plugin-whitelist
+
+Error retrieving Android platform information: Error: android: Command failed with exit code ENOENT
+
