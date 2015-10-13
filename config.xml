@@ -1,6 +1,6 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.subacuaticas.appweb" version="1.0.0">
   <name>AppWeb Subacuaticas</name>
-  <description>Aplicación para el club deportivo de Actividades Subacuáticas de la Real sociedad</description>
+  <description>Aplicacion para el club deportivo de Actividades Subacuáticas de la Real sociedad</description>
   <author href="http://prismacm.com" email="soporte@prismacm.com">PrismaCm</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
