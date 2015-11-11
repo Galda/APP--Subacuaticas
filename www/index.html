@@ -36,12 +36,11 @@
 			var iabRef = null;
             app.initialize();			
 			
-			function onDeviceReady() {
-			 iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1');
-			 iabRef.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-			 iabRef.addEventListener('loadstop', insertMyHeader);
-			 iabRef.addEventListener('exit', iabClose);
-			}
+			iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1');
+			iabRef.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+			iabRef.addEventListener('loadstop', insertMyHeader);
+			iabRef.addEventListener('exit', iabClose);
+			
 			
 			function insertMyHeader() {
 				iabRef.executeScript({
