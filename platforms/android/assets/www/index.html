@@ -29,17 +29,16 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Subacuáticas Real Sociedad</title>
     </head>
-    <body>        
+    <body style="min-height:600px;background:url('load.gif') no-repeat center center">        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
 			var iabRef = null;
             app.initialize();			
 			
-			iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1');
+			iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1','_blank');
 			iabRef.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
 			iabRef.addEventListener('loadstop', insertMyHeader);
-			iabRef.addEventListener('exit', iabClose);
 			
 			
 			function insertMyHeader() {
