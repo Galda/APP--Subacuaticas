@@ -55,10 +55,10 @@ var app = {
 			if(control){
 				iabRef.executeScript({
 					//code: "var img=document.querySelector('#logo a img.hidden-xs'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
-					code: "var div = document.querySelector('#logo a span'); var text='Dame un besito';div.innerHTML = '<button onclick=alert(text);>Tocame</button>';"					
+					code: "var div = document.querySelector('#logo a span'); var text='Dame un besito';div.innerHTML = '<button onclick=navigator.notification.vibrate([50,150,50,200]);>Tocame</button>';"					
 				}, function(a) {
 					iabRef.show();
-					navigator.notification.vibrate([50,150,50,200]);
+					navigator.notification.vibrate([50,150,50,200,120,500,50,100]);
 				})
 				control=0;
 			}else{
