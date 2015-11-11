@@ -33,7 +33,43 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+		
+		/*
+		function replaceHeaderImage() {
+			iabRef.executeScript({
+				code: "var img=document.querySelector('#logo a img.hidden-xs'); img.src='http://cordova.apache.org/images/cordova_bot.png'; alert(img.src);"
+			}, function() {});
+		}
+		
+		iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1','_blank','location=no');
+		iabRef.addEventListener('loadstop', replaceHeaderImage);	
+		
+		*/
+		
+		
+    // Inject our custom JavaScript into the InAppBrowser window
+    //
+		var iabRef = null;
+		var control = 1;
+		function replaceHeaderImage() {
+			if(control){
+				iabRef.executeScript({
+					//code: "var img=document.querySelector('#logo a img.hidden-xs'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+					code: "var div = document.querySelector('#logo a span'); var text='Dame un besito';div.innerHTML = '<button onclick=alert(text);>Tocame</button>';"					
+				}, function(a) {
+					iabRef.show();
+					navigator.notification.vibrate([50,150,50,200]);
+				})
+				control=0;
+			}else{
+				control=1;
+			}
+		}
+
+		// device APIs are available
+		//
+		 iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1','_blank','location=no,hidden=yes,zoom=no,closebuttoncaption=salir,toolbar=no');
+		 iabRef.addEventListener('loadstop', replaceHeaderImage);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +83,4 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
