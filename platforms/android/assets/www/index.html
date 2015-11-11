@@ -33,9 +33,24 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-			window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1');
+			var iabRef = null;
             app.initialize();			
+			
+			function onDeviceReady() {
+			 iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1');
+			 iabRef.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+			 iabRef.addEventListener('loadstop', insertMyHeader);
+			 iabRef.addEventListener('exit', iabClose);
+			}
+			
+			function insertMyHeader() {
+				iabRef.executeScript({
+					code: "var b=document.querySelector('body'); var a=document.createElement('div');document.createTextNode('my own header!'); a.appendChild(newContent);b.parentNode.insertBefore(a,b);"
+				}, function() {
+					alert("header successfully added");
+				});
+			}
         </script>
-		<div style="position:fixed;bottom:0;height:200px;width:100%;">Molo!</div>
+		
     </body>
 </html>
