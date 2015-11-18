@@ -34,42 +34,32 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 		
-		/*
-		function replaceHeaderImage() {
-			iabRef.executeScript({
-				code: "var img=document.querySelector('#logo a img.hidden-xs'); img.src='http://cordova.apache.org/images/cordova_bot.png'; alert(img.src);"
-			}, function() {});
-		}
 		
-		iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1','_blank','location=no');
-		iabRef.addEventListener('loadstop', replaceHeaderImage);	
-		
-		*/
-		
-		
-    // Inject our custom JavaScript into the InAppBrowser window
-    //
-		var iabRef = null;
-		var control = 1;
-		function replaceHeaderImage() {
-			if(control){
-				iabRef.executeScript({
-					//code: "var img=document.querySelector('#logo a img.hidden-xs'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
-					code: "var div = document.querySelector('#logo a span');div.innerHTML = '<button onclick=navigator.notification.vibrate([50,150,50,200]);>Tocame</button>';"					
-				}, function(a) {
-					iabRef.show();
-					navigator.notification.vibrate([50,150,50,200,120,500,50,100]);
-				})
-				control=0;
-			}else{
-				control=1;
-			}
-		}
+	//Por ahora comento este código, ayq ue nos daría problemas y no lo necesitamos. Pruebo conm un iframe, que parece la mejor y única opción
 
-		// device APIs are available
-		//
-		 iabRef = window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1','_blank','location=no,hidden=yes,zoom=no,closebuttoncaption=salir,toolbar=no');
-		 iabRef.addEventListener('loadstop', replaceHeaderImage);
+	/////***************************************************////
+		// Inject our custom JavaScript into the InAppBrowser window
+			//var iabRef = null;
+			/*
+			var control = 1;
+			function replaceHeaderImage() {
+				if(control){
+					iabRef.executeScript({
+						//code: "var img=document.querySelector('#logo a img.hidden-xs'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+						code: "var div = document.querySelector('#logo a span');div.innerHTML = '<button onclick=navigator.notification.vibrate([50,150,50,200]);>Tocame</button>';"					
+					}, function(a) {
+						iabRef.show();
+						navigator.notification.vibrate([50,150,50,200,120,500,50,100]);
+					})
+					control=0;
+				}else{
+					control=1;
+				}
+			}*/
+	/////***************************************************////
+	
+		 //window.open('http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1','_blank','location=no,zoom=no,closebuttoncaption=salir,toolbar=no');
+		// iabRef.addEventListener('loadstop', replaceHeaderImage);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -84,3 +74,22 @@ var app = {
     }
 };
 
+
+function capturate() {
+	var imageLink;
+    console.log('Calling from CapturePhoto');
+    navigator.screenshot.save(function(error,res){
+        if(error){
+            alert(error);
+        }else{
+            alert(res.filePath); //should be path/to/myScreenshot.jpg
+            //For android
+            imageLink = res.filePath;
+           window.plugins.socialsharing.share(null, null,'file://'+imageLink, null);
+
+           //For iOS
+           //window.plugins.socialsharing.share(null,   null,imageLink, null)
+		}
+    },'jpg',50,'myScreenShot');
+    navigator.notification.vibrate([50,150,50,200]);
+}

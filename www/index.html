@@ -29,12 +29,17 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Subacuáticas Real Sociedad</title>
     </head>
-    <body style="min-height:600px;background:url('load.gif') no-repeat center center">        
+    <body>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
-		
+		<div style="position: absolute;top:0;height: calc(5%); width: calc(100%);">
+			<button class="btn large" onclick="capturate();">Captura</button>
+		</div>
+		<div style="position: absolute;top:5%;height: calc(95%); width: calc(100%);">
+			<iframe style="border-width: 0px; width: 100%; height: 100%;" src="http://subacuaticasrealsociedad.com/estado-de-la-mar/?app=1"></iframe>
+		</div>
     </body>
 </html>
