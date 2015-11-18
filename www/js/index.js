@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
 		
 		
-	//Por ahora comento este código, ayq ue nos daría problemas y no lo necesitamos. Pruebo conm un iframe, que parece la mejor y única opción
+	//Por ahora comento este cÃ³digo, ayq ue nos darÃ­a problemas y no lo necesitamos. Pruebo conm un iframe, que parece la mejor y Ãºnica opciÃ³n
 
 	/////***************************************************////
 		// Inject our custom JavaScript into the InAppBrowser window
@@ -83,11 +83,11 @@ function capturate() {
             alert(error);
         }else{
            // alert(res.filePath); //should be path/to/myScreenshot.jpg
-            alert('Selecciona un método de compartir la captura realizada'); //should be path/to/myScreenshot.jpg
+            alert('Selecciona un mÃ©todo de compartir la captura realizada'); //should be path/to/myScreenshot.jpg
             //For android
 			imageLink = res.filePath;
 			//window.plugins.socialsharing.share(null, null,'file://'+imageLink, null);
-			window.plugins.socialsharing.shareViaWhatsApp('Estado de la mar', 'Mira el estado de la mar en la web de la Secciòn de actividades subacuáticas de la Real Sociedad de Fútbol','file://'+imageLink, 'http://www.subacuaticasrealsociedad.com/');
+			window.plugins.socialsharing.shareViaWhatsApp('Estado de la mar', 'Mira el estado de la mar en la web de la SecciÃ²n de actividades subacuÃ¡ticas de la Real Sociedad de FÃºtbol','file://'+imageLink, 'http://www.subacuaticasrealsociedad.com/');
 
            //For iOS
            //window.plugins.socialsharing.share(null,   null,imageLink, null)
