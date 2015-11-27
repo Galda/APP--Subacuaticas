@@ -1,12 +1,12 @@
 Node version: v0.12.4
 
-Cordova version: 5.0.0
+Cordova version: 5.3.3
 
 Config.xml file: 
 
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.subacuaticas.appweb" version="1.0.0"  xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>AppWeb Subacuaticas</name>
-  <description>Aplicacion para el club deportivo de Actividades Subacuaticas de la Real sociedad</description>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.subacuaticas.appweb" version="1.1.2"  xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Estado de la mar</name>
+  <description>Aplicacion para conocer el estado de la mar de cara a la practica de submarinismo y pesca submarina de la Seccion de Actividades Subacuaticas de la Real sociedad de Futbol</description>
   <author href="http://prismacm.com" email="soporte@prismacm.com">PrismaCm</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
@@ -24,25 +24,12 @@ Config.xml file:
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-  <gap:plugin name="org.apache.cordova.battery-status"/>
-  <gap:plugin name="org.apache.cordova.camera"/>
-  <gap:plugin name="org.apache.cordova.media-capture"/>
-  <gap:plugin name="org.apache.cordova.console"/>
-  <gap:plugin name="org.apache.cordova.contacts"/>
-  <gap:plugin name="org.apache.cordova.device"/>
-  <gap:plugin name="org.apache.cordova.device-motion"/>
-  <gap:plugin name="org.apache.cordova.device-orientation"/>
-  <gap:plugin name="org.apache.cordova.dialogs"/>
-  <gap:plugin name="org.apache.cordova.file"/>
-  <gap:plugin name="org.apache.cordova.file-transfer"/>
-  <gap:plugin name="org.apache.cordova.geolocation"/>
-  <gap:plugin name="org.apache.cordova.globalization"/>
-  <gap:plugin name="org.apache.cordova.inappbrowser"/>
-  <gap:plugin name="org.apache.cordova.media"/>
-  <gap:plugin name="org.apache.cordova.network-information"/>
-  <gap:plugin name="org.apache.cordova.splashscreen"/>
-  <gap:plugin name="org.apache.cordova.vibration"/>
-  <gap:plugin name="nl.x-services.plugins.socialsharing" />
+  <preference name="phonegap-version" value="3.7.0" /> 
+  
+	<gap:plugin name="org.apache.cordova.camera"/>
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
+	<gap:plugin name="com.darktalker.cordova.screenshot" />
+	<gap:plugin name="org.apache.cordova.inappbrowser"/>
   
   <icon src="www/icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
@@ -58,9 +45,27 @@ Config.xml file:
   <icon src="www/res/icon/webos/icon-64.png" gap:platform="webos"/>
   <icon src="www/res/icon/windows-phone/icon-48.png" gap:platform="winphone"/>
   <icon src="www/res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
- 
- <gap:splash src="www/res/screen/screen.png" />
 
+  <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png" />
+  <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
+  <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
+  <gap:splash src="www/res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
+  <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
+  
+  <gap:splash src="www/res/screen/android/screen-ldpi-landscape.png" gap:platform="android" gap:qualifier="land-ldpi"/>
+  <gap:splash src="www/res/screen/android/screen-mdpi-landscape.png" gap:platform="android" gap:qualifier="land-mdpi"/>
+  <gap:splash src="www/res/screen/android/screen-hdpi-landscape.png" gap:platform="android" gap:qualifier="land-hdpi"/>
+  <gap:splash src="www/res/screen/android/screen-xhdpi-landscape.png" gap:platform="android" gap:qualifier="land-xhdpi"/>
+  
+  <gap:splash src="www/res/screen/blackberry/screen-225.png" gap:platform="blackberry"/>
+  <gap:splash src="www/res/screen/ios/screen-iphone-portrait.png" gap:platform="ios" width="320" height="480"/>
+  <gap:splash src="www/res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios" width="640" height="960"/>
+  <gap:splash src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios" width="640" height="1136"/>
+  <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024"/>
+  <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
+  <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
+  
+  
  <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
@@ -80,7 +85,11 @@ Config.xml file:
 
 Plugins: 
 
-cordova-plugin-whitelist
+cordova-plugin-inappbrowser,cordova-plugin-whitelist
 
-Error retrieving Android platform information: Error: android: Command failed with exit code ENOENT
+Error retrieving Android platform information: Error: cmd: Command failed with exit code 1 Error output:
+"android" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+
 
