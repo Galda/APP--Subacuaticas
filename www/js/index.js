@@ -83,7 +83,7 @@ function capturate() {
             alert(error);
         }else{
            // alert(res.filePath); //should be path/to/myScreenshot.jpg
-            alert('Selecciona un m&eacute;todo de compartir la captura realizada'); //should be path/to/myScreenshot.jpg
+            //alert('Elige compartir la captura realizada'); //should be path/to/myScreenshot.jpg
             //For android
 			imageLink = res.filePath;
 			//window.plugins.socialsharing.share(null, null,'file://'+imageLink, null);
