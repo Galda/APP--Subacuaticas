@@ -86,7 +86,7 @@ function capturate() {
             //alert('Elige compartir la captura realizada'); //should be path/to/myScreenshot.jpg
             //For android
 			imageLink = res.filePath;
-			window.plugins.socialsharing.share('Estado de la mar','Mira el estado de la mar en la web de la Secci&oacute;n de actividades subacuáticas de la Real Sociedad de F&uacute;tbol','file://'+imageLink, null);
+			window.plugins.socialsharing.share('Mira el estado de la mar en la web de las actividades subacuáticas de la Real Sociedad',null,'file://'+imageLink, 'http://www.subacuaticasrealsociedad.com/');
 			//window.plugins.socialsharing.shareViaWhatsApp('Estado de la mar', 'Mira el estado de la mar en la web de la Secci&oacute;n de actividades subacuáticas de la Real Sociedad de F&uacute;tbol','file://'+imageLink, 'http://www.subacuaticasrealsociedad.com/');
 
            //For iOS
