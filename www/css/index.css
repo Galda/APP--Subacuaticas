@@ -96,7 +96,7 @@ h1 {
 	background:url('../img/bg-head.png') repeat-x;
 	position: absolute;
 	top:0;
-	height: 60px; 
+	height: 86px; 
 	width: calc(100%);
 }
 .capturar {
@@ -104,8 +104,8 @@ h1 {
   border: 0 none;
   float: right;
   font-size: 0;
-  height: 60px;
+  height: 86px;
   margin: 0;
   padding: 0;
-  width: 60px;
+  width: 75px;
 }
