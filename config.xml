@@ -1,5 +1,5 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.subacuaticas.appweb" version="1.1.2"  xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Estado de la mar</name>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="R73TM469DD.com.subacuaticas.appweb" version="1.2.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Estado del mar</name>
   <description>Aplicacion para conocer el estado de la mar de cara a la practica de submarinismo y pesca submarina de la Seccion de Actividades Subacuaticas de la Real sociedad de Futbol</description>
   <author href="http://prismacm.com" email="soporte@prismacm.com">PrismaCm</author>
   <content src="index.html"/>
