@@ -93,10 +93,10 @@ h1 {
 }
 
 #header{
-	background:url('../img/bg-head.png') repeat-x;
+	background:url('../img/bg-head.png') repeat-x 20px center;
 	position: absolute;
 	top:0;
-	height: 86px; 
+	height: 106px; 
 	width: calc(100%);
 }
 .capturar {
