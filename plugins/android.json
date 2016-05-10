@@ -23,10 +23,10 @@
     },
     "installed_plugins": {
         "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.subacuaticas.appweb"
+            "PACKAGE_NAME": "R73TM469DD.com.subacuaticas.appweb"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.subacuaticas.appweb"
+            "PACKAGE_NAME": "R73TM469DD.com.subacuaticas.appweb"
         }
     },
     "dependent_plugins": {}

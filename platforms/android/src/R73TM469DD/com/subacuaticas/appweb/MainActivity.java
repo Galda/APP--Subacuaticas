@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.subacuaticas.appweb;
+package R73TM469DD.com.subacuaticas.appweb;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
