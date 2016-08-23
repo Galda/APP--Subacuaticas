@@ -1,10 +1,10 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="R73TM469DD.com.subacuaticas.appweb" version="1.6" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="R73TM469DD.com.subacuaticas.appweb" version="1.5.2" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Estado del mar</name>
   <description>Aplicacion para conocer el estado de la mar de cara a la practica de submarinismo y pesca submarina de la Seccion de Actividades Subacuaticas de la Real sociedad de Futbol</description>
   <author href="http://prismacm.com" email="soporte@prismacm.com">PrismaCm</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
-  <preference name="orientation" value="lanscape"/>
+  <preference name="orientation" value="landscape"/>
   <preference name="target-device" value="universal"/>
   <preference name="fullscreen" value="true"/>
   <preference name="webviewbounce" value="true"/>
@@ -62,10 +62,6 @@
   <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
   
-  <gap:config-file platform="android" parent="UISupportedInterfaceOrientations" overwrite="true">
-<array>
-    <string>UIInterfaceOrientationLandscapeRight</string>
-</array>
  <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
