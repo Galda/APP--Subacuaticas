@@ -78,20 +78,29 @@ var app = {
 function capturate() {
 	var imageLink;
     console.log('Calling from CapturePhoto');
-    navigator.screenshot.save(function(error,res){
+    /*
+		navigator.screenshot.save(function(error,res){
         if(error){
             alert(error);
         }else{
+	*/
            // alert(res.filePath); //should be path/to/myScreenshot.jpg
             //alert('Elige compartir la captura realizada'); //should be path/to/myScreenshot.jpg
-            //For android
+            
+			//Para android
+			/*
 			imageLink = res.filePath;
 			window.plugins.socialsharing.share('Mira el estado de la mar en la APP de Subacuáticas de la Real Sociedad de Fútbol. +INFO:',null,'file://'+imageLink, 'http://www.subacuaticasrealsociedad.com/');
+			*/
+			
+			//Cambiamos para IOS (comentandolo todo)
+			window.plugins.socialsharing.share('Mira el estado de la mar en la APP de Subacuáticas de la Real Sociedad de Fútbol. +INFO:',null,null, 'http://www.subacuaticasrealsociedad.com/');
+			
 			//window.plugins.socialsharing.shareViaWhatsApp('Estado de la mar', 'Mira el estado de la mar en la web de la Secci&oacute;n de actividades subacuáticas de la Real Sociedad de F&uacute;tbol','file://'+imageLink, 'http://www.subacuaticasrealsociedad.com/');
 
            //For iOS
            //window.plugins.socialsharing.share(null,   null,imageLink, null)
-		}
-    },'jpg',50,'myScreenShot');
-    navigator.notification.vibrate([50,150,50,200]);
+	//	}
+  //   },'jpg',50,'myScreenShot');
+  //  navigator.notification.vibrate([50,150,50,200]);
 }
